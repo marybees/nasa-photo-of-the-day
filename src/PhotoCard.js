@@ -5,11 +5,10 @@ const PhotoCard = (props) => {
     <div>
         <div className='header'>
             <h1>NASA Photo of the Day</h1>
-            <button>Get Today's Photo</button>
         </div>
         <div className='above-photo'>
-            <h2>Title: {props.title}</h2>
-            <h3>Date: {props.date}</h3>
+            <h4>Title: {props.title}</h4>
+            <h5>Date: {props.date}</h5>
         </div>
         <div className='photo-container'>
         <img
@@ -19,6 +18,7 @@ const PhotoCard = (props) => {
         />
       </div>
         <div className="below-photo">
+            <button>Show Explanation</button>
             <p>Explanation: {props.explanation}</p>
         </div>
         <div className='footer'>

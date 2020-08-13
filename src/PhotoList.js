@@ -33,7 +33,7 @@ function PhotoList() {
     })
     return (
     <div className='photos'>
-        ${photosComponents}
+        {photosComponents}
     </div>
     );
 
