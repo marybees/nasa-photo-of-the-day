@@ -6,7 +6,18 @@ import Details from './Details'
 
 
 function App() {
-  const [photo, setPhoto] = useState([])
+  const [photo, setPhoto] = useState();
+  // useEffect(() => {
+  //   axios.get({API_KEY})
+  //     .then(res => {
+  //       setPhoto(res.data)
+  //     })
+  //     .catch(err => {
+  //       debugger
+  //     })
+  //     .finally(() => {
+  //     })
+  // }, [])
   return (
     <div className="App">
       <h1>NASA Photo of the Day</h1>
