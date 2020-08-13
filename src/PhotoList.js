@@ -33,6 +33,7 @@ function PhotoList() {
         const explanation = explanationOn ? photo.explanation : ''
         return (
             <PhotoCard
+            key={photo.date}
             title = {photo.title} 
             date = {photo.date} 
             url = {photo.url}

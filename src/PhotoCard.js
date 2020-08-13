@@ -24,7 +24,7 @@ const PhotoCard = (props) => {
 
         </div>
         <div className='footer'>
-            <p>© {props.copyright}</p>
+            <h5>© {props.copyright}</h5>
         </div>
     </div>
     );
