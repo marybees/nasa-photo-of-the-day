@@ -11,7 +11,13 @@ const PhotoCard = (props) => {
             <h2>Title: {props.title}</h2>
             <h3>Date: {props.date}</h3>
         </div>
-        <div className = 'photo'>{props.url}</div>
+        <div className='photo-container'>
+        <img
+          alt='post thumbnail'
+          className='photo'
+          src={props.url}
+        />
+      </div>
         <div className="below-photo">
             <p>Explanation: {props.explanation}</p>
         </div>
