@@ -4,7 +4,7 @@ const PhotoCard = (props) => {
     return (
     <div>
         <div className='header'>
-            <h1>NASA Photo of the Day</h1>
+            <h1>Photo of the Day</h1>
         </div>
         <div className='above-photo'>
             <h4>{props.title}</h4>
