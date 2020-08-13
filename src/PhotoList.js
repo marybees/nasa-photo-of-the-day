@@ -9,20 +9,23 @@ function PhotoList() {
       axios.get({API_KEY})
         .then(response => {
           setPhotos(response.data)
-          console.log(response)
+          console.log(response.data)
         })
         .catch(error => {
           console.log('The data was not returned', error);
         })
-        // .finally(() => {
-        // })
+
     }, [])
     return (
-    <div className="photo">
+    <div className='photo'>
         photos.map(photo => {
             return (
-            <PhotoCard
-            title = {PhotoCard.title} date = {PhotoCard.date} explanation = {PhotoCard.explanation} copyright = {PhotoCard.copyright}/>
+                <PhotoCard
+                title = {photo.title} 
+                date = {photo.date} 
+                url = {photo.url}
+                explanation = {photo.explanation} 
+                copyright = {photo.copyright}/>
             )
         })
     </div>
