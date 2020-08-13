@@ -1,18 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PhotoList from './PhotoList'
 
 const PhotoCard = (props) => {
-
-    const [ explanationOn, setExplanationOn ] = useState(true);
-    
-    const buttonText = explanationOn ? 'Show Explanation' : 'Hide Explanation'
-
-    const explanation = explanationOn ? props.explanation : ''
-
-    const toggleExplanation = () => {
-        return setExplanationOn(!explanationOn)
-    };
-
     return (
 
     <div>
@@ -31,8 +20,8 @@ const PhotoCard = (props) => {
         />
       </div>
         <div className="below-photo">
-            <button onClick={toggleExplanation}>{buttonText}</button>
-            <p>{explanation}</p>
+            <button onClick={props.toggleExplanation}>{props.buttonText}</button>
+            <p>{props.explanation}</p>
         </div>
         <div className='footer'>
             <h6>© {props.copyright}</h6>
