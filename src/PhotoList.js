@@ -5,8 +5,8 @@ import PhotoCard from './PhotoCard'
 function PhotoList() {
 
     const [photos, setPhotos] = useState([]);
-
-    const nasaUrl = 'https://api.nasa.gov/planetary/apod?api_key=bpJ7TgEPWUCwtiDA3KTp3s6CMzQXVUFF66TfzCIo&date=2020-08-12'
+    
+    const nasaUrl = 'https://api.nasa.gov/planetary/apod?api_key=AJlzeeraKBsB8HXkf9aCKd52fNXGLncJRQEfAxpO&date=2020-08-12'
 
     useEffect(() => {
       axios.get(nasaUrl)
