@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import "./App.css";
-import axios from 'axios'
-import { API_KEY } from './constants'
-import PhotoCard from './PhotoCard'
 import PhotoList from './PhotoList';
 
 

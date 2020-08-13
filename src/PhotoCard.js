@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import { API_KEY } from './constants'
+import React from 'react'
 
 const PhotoCard = (props) => {
     console.log(props);

@@ -16,18 +16,20 @@ function PhotoList() {
         })
 
     }, [])
+    const photosComponents = 
+    photos.map((photo) => {
+        return (
+            <PhotoCard
+            title = {photo.title} 
+            date = {photo.date} 
+            url = {photo.url}
+            explanation = {photo.explanation} 
+            copyright = {photo.copyright}/>
+        )
+    })
     return (
-    <div className='photo'>
-        photos.map(photo => {
-            return (
-                <PhotoCard
-                title = {photo.title} 
-                date = {photo.date} 
-                url = {photo.url}
-                explanation = {photo.explanation} 
-                copyright = {photo.copyright}/>
-            )
-        })
+    <div className='photos'>
+        ${photosComponents}
     </div>
     );
   }
