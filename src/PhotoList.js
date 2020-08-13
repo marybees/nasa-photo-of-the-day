@@ -5,8 +5,13 @@ import PhotoCard from './PhotoCard'
 function PhotoList() {
 
     const [photos, setPhotos] = useState([]);
+<<<<<<< HEAD
     
     // const nasaUrl = 'https://api.nasa.gov/planetary/apod?api_key=1hrs3VcXiRvjz5c9kEvjeaR1K5hViVsIwbIwsGRx&date=2020-08-12'
+=======
+
+    const nasaUrl = 'https://api.nasa.gov/planetary/apod?api_key=bpJ7TgEPWUCwtiDA3KTp3s6CMzQXVUFF66TfzCIo&date=2020-08-12'
+>>>>>>> parent of 75df4eb... Add click event to hide and show explanation
 
     useEffect(() => {
       axios.get(nasaUrl)
