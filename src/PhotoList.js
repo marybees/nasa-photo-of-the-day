@@ -12,7 +12,6 @@ function PhotoList() {
       axios.get(nasaUrl)
         .then(response => {
           setPhotos([response.data])
-          console.log(response.data)
         })
         .catch(error => {
           console.log('The data was not returned', error);
@@ -22,7 +21,7 @@ function PhotoList() {
 
     const [ explanationOn, setExplanationOn ] = useState(true);
     
-    const buttonText = explanationOn ? 'Show Explanation' : 'Hide Explanation'
+    const buttonText = explanationOn ? 'Hide Explanation' : 'Show Explanation'
 
     const toggleExplanation = () => {
         return setExplanationOn(!explanationOn)
@@ -33,7 +32,7 @@ function PhotoList() {
         const explanation = explanationOn ? photo.explanation : ''
         return (
             <PhotoCard
-            key={photo.date}
+            key = {photo.date}
             title = {photo.title} 
             date = {photo.date} 
             url = {photo.url}

@@ -1,15 +1,49 @@
 import React from 'react'
+import styled from 'styled-components'
+import { Button } from 'reactstrap';
+
+const WrapperDiv = styled.div`
+font-family: 'Orbitron', sans-serif;
+text-align: center;
+background-color: black;
+`
+;
+
+const Header = styled.div`
+font-weight: bold;
+font-size: 40px;
+padding: 1%;
+`
+;
+
+const SubHeading = styled.div`
+padding: 1%;
+`
+;
+const Paragraph = styled.p`
+font-size: 20px;
+padding: 0 18% 0 18%;
+text-align: justify;
+`
+;
+
+const Btn = styled.div`
+padding: 2%;
+`
+;
+
+
 
 const PhotoCard = (props) => {
     return (
-    <div>
-        <div className='header'>
+    <WrapperDiv>
+        <Header className='header'>
             <h1>Photo of the Day</h1>
-        </div>
-        <div className='above-photo'>
+        </Header>
+        <SubHeading className='above-photo'>
             <h4>{props.title}</h4>
             <h5>Date: {props.date}</h5>
-        </div>
+        </SubHeading>
         <div className='photo-container'>
         <img
           alt='post thumbnail'
@@ -17,16 +51,18 @@ const PhotoCard = (props) => {
           src={props.url}
         />
       </div>
-        <div className="below-photo">
-
-            <button onClick={props.toggleExplanation}>{props.buttonText}</button>
+      <Btn className='button'>
+        <Button outline color="info" onClick={props.toggleExplanation}>{props.buttonText}</Button>
+        {/* <button onClick={props.toggleExplanation}>{props.buttonText}</button> */}
+      </Btn>
+        <Paragraph className='below-photo'>
             <p>{props.explanation}</p>
 
-        </div>
+        </Paragraph>
         <div className='footer'>
             <h5>© {props.copyright}</h5>
         </div>
-    </div>
+    </WrapperDiv>
     );
 };
 
